@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 9090
+  servlet:
+    context-path: /api/
+wx:
+  pay:
+    appId: wx9ff56a4c00b4e96d
+    #微信支付商户号
+    mchId: 1456031502
+    #微信支付商户密钥
+    mchKey: jiushifenzhongtiqiu2020tuanduiJS
+    # p12证书的位置，可以指定绝对路径，也可以指定类路径（以classpath:开头）
+    keyPath: classpath:/cert/apiclient_cert.p12
+  miniapp:
+    appid: wx9ff56a4c00b4e96d
+    #    secret: 1ac4fdb3e9e71eb0593a85a8be8b2e43
+    secret: 96f51f7171394956948f4ea6dd011320
+    #token: 111
+    #aesKey: 111
+    msgDataFormat: JSON
+

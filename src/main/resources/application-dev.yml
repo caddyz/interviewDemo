@@ -1,0 +1,17 @@
+db: interview
+add: localhost
+dbport: 3306
+spring:
+  profiles:
+    include: druid,mybatisplus
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://${add}:${dbport}/${db}?useUnicode=true&characterEncoding=UTF-8&useSSL=false&tinyIntlisBit=true&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password: password
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5242880
+#mybatis-plus:
+#  type-handlers-package: com.miaoyidj.miniprogram.typehandler
